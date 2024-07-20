@@ -25,7 +25,7 @@ async def Yetiskin(ctx):
     """Adds two numbers together."""
     with open('yetiskinlere.txt', 'r', encoding='utf8') as f:
         yetiskinler = f.readlines()
-    with open('./image/topluTasimaFoto.webp', 'rb') as f:
+    with open('topluTasimaFoto.webp', 'rb') as f:
         resim = discord.File(f)
     await ctx.send(random.choice(yetiskinler)), await ctx.send(file=resim)
 
@@ -36,7 +36,7 @@ async def Gencler(ctx):
     random_number = random.randint(0, 1)
     with open('gencler.txt', 'r', encoding='utf8') as f:
         gencler = f.readlines()
-    with open(f'./image/Gencler{random_number}.jpg', 'rb') as f:
+    with open(f'Gencler{random_number}.jpg', 'rb') as f:
         resim = discord.File(f)
     await ctx.send(gencler[random_number]), await ctx.send(file=resim)
 
